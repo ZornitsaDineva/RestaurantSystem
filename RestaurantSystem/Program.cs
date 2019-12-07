@@ -6,7 +6,12 @@ namespace RestaurantSystem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Restaurant restaurant = getRestaurant();
+        }
+
+        private static Restaurant getRestaurant()
+        {
+            throw new NotImplementedException();
         }
     }
 }
