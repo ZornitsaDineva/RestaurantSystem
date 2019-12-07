@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace RestaurantSystem
 {
@@ -8,12 +9,26 @@ namespace RestaurantSystem
         {
             Restaurant restaurant = GetRestaurant();
             DeliveryControl deliveryControl = new DeliveryControl(restaurant);
-            deliveryControl.showProductsToOrder();
+            deliveryControl.ShowProductsToOrder();
         }
 
         private static Restaurant GetRestaurant()
         {
-            throw new NotImplementedException();
+            Restaurant restaurant = new Restaurant();
+
+            Product product = new Product
+            {
+                Name = "milk",
+                Qty = 0,
+                LowStockThresheld = 5
+            };
+
+            List<Product> products = new List<Product>();
+            products.Add(product);
+
+            restaurant.Products = products;
+
+            return restaurant;
         }
     }
 }

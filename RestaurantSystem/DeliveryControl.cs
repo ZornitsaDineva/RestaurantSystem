@@ -20,14 +20,13 @@ namespace RestaurantSystem
 
             foreach (Product product in Restaurant.Products)
             {
-                if (product.IsInLowStock())
+                if (product.IsOutOfStock())
+                {
+                    Console.WriteLine("Product " + product.Name + " is out of stock");
+                } else if (product.IsInLowStock())
                 {
                     Console.WriteLine("Product " + product.Name + " is in low stock");
-                }
-                else if (product.IsOutOfStock())
-                {
-                    Console.WriteLine("Product" + product.Name + "is out of stock");
-                }
+                }                
             }
         }
     }
