@@ -13,5 +13,23 @@ namespace RestaurantSystem
         {
             this.restaurant = restaurant;
         }
+
+        internal void ShowProductsToOrder()
+        {
+            Console.WriteLine("Products to order report");
+
+            foreach (Product product in Restaurant.Products)
+            {
+                if (product.IsInLowStock())
+                {
+                    Console.WriteLine("Product " + product.Name + " is in low stock");
+                }
+                else if (product.IsOutOfStock())
+                {
+                    Console.WriteLine("Product" + product.Name + "is out of stock");
+                }
+            }
+        }
     }
 }
+

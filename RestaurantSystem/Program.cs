@@ -8,6 +8,7 @@ namespace RestaurantSystem
         {
             Restaurant restaurant = GetRestaurant();
             DeliveryControl deliveryControl = new DeliveryControl(restaurant);
+            deliveryControl.showProductsToOrder();
         }
 
         private static Restaurant GetRestaurant()
