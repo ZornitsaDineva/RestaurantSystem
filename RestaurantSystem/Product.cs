@@ -14,12 +14,12 @@
         public int Qty { get => qty; set => qty = value; }
         public int LowStockThresheld { get => lowStockThresheld; set => lowStockThresheld = value; }
 
-        public bool isInLowStock()
+        public bool IsInLowStock()
         {
             return qty < lowStockThresheld;
         }
 
-        public bool isOutOfStock()
+        public bool IsOutOfStock()
         {
             return qty == 0;
         }

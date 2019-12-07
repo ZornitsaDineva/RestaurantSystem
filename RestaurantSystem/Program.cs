@@ -6,10 +6,11 @@ namespace RestaurantSystem
     {
         static void Main(string[] args)
         {
-            Restaurant restaurant = getRestaurant();
+            Restaurant restaurant = GetRestaurant();
+            DeliveryControl deliveryControl = new DeliveryControl(restaurant);
         }
 
-        private static Restaurant getRestaurant()
+        private static Restaurant GetRestaurant()
         {
             throw new NotImplementedException();
         }
