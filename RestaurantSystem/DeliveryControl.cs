@@ -16,7 +16,7 @@ namespace RestaurantSystem
 
         internal void ShowProductsToOrder()
         {
-            Console.WriteLine("Products to order report");
+            Console.WriteLine("Products to order report:");
 
             foreach (Product product in Restaurant.Products)
             {

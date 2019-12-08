@@ -7,28 +7,10 @@ namespace RestaurantSystem
     {
         static void Main(string[] args)
         {
-            Restaurant restaurant = GetRestaurant();
+            DBAccess dbAccess = new DBAccess();
+            Restaurant restaurant = dbAccess.GetRestaurant();
             DeliveryControl deliveryControl = new DeliveryControl(restaurant);
             deliveryControl.ShowProductsToOrder();
-        }
-
-        private static Restaurant GetRestaurant()
-        {
-            Restaurant restaurant = new Restaurant();
-
-            Product product = new Product
-            {
-                Name = "milk",
-                Qty = 0,
-                LowStockThresheld = 5
-            };
-
-            List<Product> products = new List<Product>();
-            products.Add(product);
-
-            restaurant.Products = products;
-
-            return restaurant;
         }
     }
 }
